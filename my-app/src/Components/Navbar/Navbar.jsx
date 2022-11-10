@@ -1,11 +1,12 @@
-import { ReactNode } from 'react';
-import { extendTheme } from '@chakra-ui/react'
+
+
+import {Link} from 'react-router-dom'
 import {
   Box,
   Flex,
   Avatar,
   HStack,
-  Link,
+  
   IconButton,
   Button,
   Menu,
@@ -51,11 +52,12 @@ export default function Simple() {
             onClick={isOpen ? onClose : onOpen}
           />
           <HStack spacing={8} alignItems={'center'}>
+            <Link to='/'>
             <Box color="white"
             fontSize= '58px'
             fontWeight= 'semibold'
-            fontFamily="c"
-            >FOODIANS</Box>
+            fontFamily="c">FOODIANS</Box>
+             </Link>
             <HStack
             fontSize='20px'
             fontFamily='c'
@@ -84,8 +86,12 @@ export default function Simple() {
                 />
               </MenuButton>
               <MenuList>
+                <Link to='/login'>
                 <MenuItem>Login</MenuItem>
+                </Link>
+                <Link to='/signUp'>
                 <MenuItem>Sign Up</MenuItem>
+                </Link>
                 <MenuItem>Profile</MenuItem>
                 <MenuDivider />
                 
