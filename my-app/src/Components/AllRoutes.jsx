@@ -4,7 +4,8 @@ import Login from '../Pages/login';
 import Signup from '../Pages/signup';
 import Home from '../Pages/Home'
 // all the routing using the routing library should be done from here; 
-
+import AdminPanel from '../Pages/adminPanel';
+import AdminPanelData from '../Pages/adminPanelData';
 const AllRoutes = () => {
   return (
     <Routes>
@@ -18,6 +19,13 @@ const AllRoutes = () => {
         <Route path="/signUp" 
         element={<Signup/>}>
           
+        </Route>
+        <Route path="/adminPanel" 
+        element={<AdminPanel/>}>
+          
+        </Route>
+        <Route path="/adminPanelData" 
+        element={<AdminPanelData/>}>
         </Route>
        </Routes>
   )
