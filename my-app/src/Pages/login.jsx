@@ -50,9 +50,7 @@ const Login = () => {
       dispatch(loginFailureAction)
     })
   }
-  // if(state.isAuth){
-  //   return <Navigate to='/'/>
-  // }
+
   if(state.isError){
     return (
       <Container 
@@ -83,10 +81,10 @@ const Login = () => {
   return (
     <>
    
-    <Flex h="100vh" alignItems="center" justifyContent="center">
+    <Flex color="white" h="100vh" alignItems="center" justifyContent="center">
       <Flex
         flexDirection="column"
-        bg={formBackground}
+        bg='#04be5a'
         p={12}
         borderRadius={8}
         boxShadow="lg"
@@ -128,7 +126,7 @@ const Login = () => {
         </FormControl>
       </Flex>
     </Flex>
-    <Footer/>
+    
     </>
   );
 };

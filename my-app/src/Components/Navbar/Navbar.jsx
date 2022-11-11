@@ -42,9 +42,10 @@ export default function Simple() {
  
   return (
     <>
-      <Box bg={useColorModeValue('hsl(210,11%,22%)', 'gray.900')} px={4}>
+      <Box bg={useColorModeValue('#2bb673', 'gray.900')} px={4}>
         <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
           <IconButton
+          color="red"
             size={'md'}
             icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
             aria-label={'Open Menu'}
@@ -53,14 +54,15 @@ export default function Simple() {
           />
           <HStack spacing={8} alignItems={'center'}>
             <Link to='/'>
-            <Box color="white"
-            fontSize= '58px'
+            <Box color="red"
+            fontSize= '30px'
             fontWeight= 'semibold'
             fontFamily="c">FOODIANS</Box>
              </Link>
             <HStack
-            fontSize='20px'
+            fontSize='18px'
             fontFamily='c'
+           fontWeight="500"
             color="white"
               as={'nav'}
               spacing={4}
@@ -92,7 +94,9 @@ export default function Simple() {
                 <Link to='/signUp'>
                 <MenuItem>Sign Up</MenuItem>
                 </Link>
-                <MenuItem>Profile</MenuItem>
+                <Link to='/adminPanel'>
+                <MenuItem>Admin</MenuItem>
+                </Link>
                 <MenuDivider />
                 
               </MenuList>
