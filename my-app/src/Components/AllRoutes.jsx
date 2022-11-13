@@ -1,4 +1,3 @@
-
 import {Route,Routes} from 'react-router-dom';
 import Login from '../Pages/login';
 import Signup from '../Pages/signup';
@@ -6,6 +5,7 @@ import Home from '../Pages/Home'
 // all the routing using the routing library should be done from here; 
 import AdminPanel from '../Pages/adminPanel';
 import AdminPanelData from '../Pages/adminPanelData';
+import Favorite from '../Pages/Favorite';
 const AllRoutes = () => {
   return (
     <Routes>
@@ -27,6 +27,10 @@ const AllRoutes = () => {
         <Route path="/adminPanelData" 
         element={<AdminPanelData/>}>
         </Route>
+        <Route path="/favorite" 
+        element={<Favorite/>}>
+        </Route>
+        
        </Routes>
   )
 };
