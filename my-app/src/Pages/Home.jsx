@@ -23,13 +23,7 @@ const getData=()=>{
     return axios.get(`https://www.themealdb.com/api/json/v1/1/search.php?s=${query}`);
   }
   
-const itemAlreadyExists=(id,cartItems)=>{
-    if(cartItems.find((item)=>item.id===id)){
-      return true
-      
-    }
-    return false
-  };
+
 const Home=()=>{
     const [loading,setLoading]=useState(false);
     const[data,setData]=useState([]);
@@ -163,8 +157,7 @@ const Home=()=>{
                       <GridItem rowSpan={2}>
                         <Flex align="center" justify="center">
                           <Box>
-                            <Text>ID No. {product.idMeal
-}</Text>
+                            <Text>ID No. {product.idMeal}</Text>
                           </Box>
                           </Flex>
                           </GridItem>
@@ -172,110 +165,239 @@ const Home=()=>{
                             <Flex>
                               <Button
                               colorScheme="gray"
-                              variant="outline"
-                             
-                              >
+                              variant="outline">
                                 Favourite
-
-                              </Button>
+                                </Button>
                             </Flex>
                           </GridItem>
                           </Grid>
                           </Box>
-                          </GridItem>
-       ))}
+                          </GridItem>))}
+                          </Grid>
+                          </Container>
+                     <Box 
+                        marginTop='50px'
+                        w="100%"
+                        bg="white"
+                        h="1700px"
+                        textAlign='center'
+                        >
+                      <h1
+                      style={{
+                        fontSize:'32px',
+                        textAlign:'center',
+                        color:'#666666',
 
-      </Grid>
+                      }}
+                      >Introducing Malaysia's Pioneering Meat-Free Lifestyle Platform</h1>
+                      <br/>
+                      
+                      <label
+                      style={{
+                        fontSize:'27px',
+                        textAlign:'center',
+                        color:'#9ca4ba',
 
-    </Container>
-    <Box 
-    marginTop='50px'
-    w="100%"
-    bg="white"
-    h="700px"
-    textAlign='center'
-    >
-   <h1
-   style={{
-    fontSize:'32px',
-    textAlign:'center',
-    color:'#666666',
+                      }}
+                      >Brought to you by
 
-   }}
-   >Introducing Malaysia's Pioneering Meat-Free Lifestyle Platform</h1>
-   <br/>
-   
-   <label
-   style={{
-    fontSize:'27px',
-    textAlign:'center',
-    color:'#9ca4ba',
+                      </label>
+                      <br/>
+                      <br/>
+                      <img 
+                      style={{
+                        marginLeft:"480px"
+                      }}
+                      width="30%" 
+                      src='https://www.kindmeal.my/images/logo-petfinder-v2.png' alt='ahiv'/>
+                      <br/>
+                      <h1
+                      style={{
+                        fontSize:'32px',
+                        textAlign:'center',
+                        color:'#9ca4ba',
 
-   }}
-   >Brought to you by
+                      }}
+                      >Instant coupon & dining. No upfront coupon payment, booking or printing.</h1>
+                      <br/>
+                      <div
+                      style={{
+                        display:'grid',
+                        gridTemplateColumns:'repeat(4,1fr)',
+                        gap:'20px',
+                        marginTop:'50px',
+                        width:'100%',
+                        border:'0px solid red',
+                      
+                      }}>
+                        <div>
+                          <img style={{
+                            marginLeft:"40px"
+                          }} src='https://www.kindmeal.my/images/intro_deal.png' alt='ahiv'/>
+                          <p
+                          style={{
+                        fontSize:'20px',
+                        textAlign:'center',
+                        color:'#666666',
 
-   </label>
-   <br/>
-   <br/>
-   <img 
-   style={{
-    marginLeft:"480px"
-   }}
-   width="30%" 
-   src='https://www.kindmeal.my/images/logo-petfinder-v2.png'/>
-   <br/>
-   <h1
-   style={{
-    fontSize:'32px',
-    textAlign:'center',
-    color:'#9ca4ba',
+                      }}>Get Great Deals</p>
+                          <p
+                          style={{
+                        fontSize:'15px',
+                        textAlign:'center',
+                        color:'#9ca4ba',
 
-   }}
-   >Instant coupon & dining. No upfront coupon payment, booking or printing.</h1>
-   <br/>
-   <div
-   style={{
-    display:'grid',
-    gridTemplateColumns:'repeat(4,1fr)',
-    gap:'20px',
-    marginTop:'50px',
-    width:'100%',
-    border:'0px solid red',
-  
-   }}>
-    <div>
-      <img style={{
-        marginLeft:"40px"
-      }} src='https://www.kindmeal.my/images/intro_deal.png'/>
-      <p>Get Great Deals</p>
-      <p>Show our FREE digital coupons to instantly enjoy exciting deals</p>
-    </div>
-    <div>
-      <img style={{
-        marginLeft:"80px"
-      }} src='https://www.kindmeal.my/images/intro_kindmoment.png'/>
-      <p>Share KindMoments</p>
-      <p>Spread the joy by sharing your yummy dining moments</p>
-    </div>
-    <div>
-      <img style={{
-        marginLeft:"46px"
-      }} src='https://www.kindmeal.my/images/intro_menu.png'/>
-      <p>Discover Delicious Food</p>
-      <p>Explore the latest exquisite offerings and creative menus</p>
-    </div>
-    <div>
-      <img style={{
-        marginLeft:"46px"
-      }} src='https://www.kindmeal.my/images/intro_friends.png'/>
-      <p>Meet Food Lovers</p>
-      <p>Make new, compassionate friends and share great food tips</p>
-    </div>
-   </div>
-    </Box>
-        </>
-    )
-}
+                      }}>Show our FREE digital coupons to instantly enjoy exciting deals</p>
+                        </div>
+                        <div>
+                          <img style={{
+                            marginLeft:"94px"
+                          }} src='https://www.kindmeal.my/images/intro_kindmoment.png' alt='shiv'/>
+                          <p
+                          style={{
+                            fontSize:'20px',
+                            textAlign:'center',
+                            color:'#666666',
+                        
+                          }}>Share KindMoments</p>
+                          <p
+                          style={{
+                            fontSize:'15px',
+                            textAlign:'center',
+                            color:'#9ca4ba',
+                        
+                          }}>Spread the joy by sharing your yummy dining moments</p>
+                        </div>
+                        <div>
+                          <img style={{
+                            marginLeft:"70px"
+                          }} src='https://www.kindmeal.my/images/intro_menu.png' alt='ahiv'/>
+                          <p
+                          style={{
+                            fontSize:'20px',
+                            textAlign:'center',
+                            color:'#666666',
+                        
+                          }}>Discover Delicious Food</p>
+                          <p
+                          style={{
+                        fontSize:'15px',
+                        textAlign:'center',
+                        color:'#9ca4ba',
+
+                      }}>Explore the latest exquisite offerings and creative menus</p>
+                        </div>
+                        <div>
+                          <img style={{
+                            marginLeft:"56px"
+                          }} src='https://www.kindmeal.my/images/intro_friends.png' alt='ahiv'/>
+                          <p
+                          style={{
+                        fontSize:'20px',
+                        textAlign:'center',
+                        color:'#666666',
+
+                      }}
+                          >Meet Food Lovers</p>
+                          <p
+                          style={{
+                        fontSize:'15px',
+                        textAlign:'center',
+                        color:'#9ca4ba',
+
+                      }}
+                          >Make new, compassionate friends and share great food tips</p>
+                        </div>
+                      </div>
+                      <br/>
+                      <br/>
+                      <p
+                      style={{
+                        fontSize:'22px',
+                        textAlign:'center',
+                        color:'#9ca4ba',
+
+                      }}
+                      >Any restaurant or cafe can join KindMeal, vegetarian or not, as long as the deals and menu featured are meat-free.
+                      Enjoy a great meat-free dining experience. Easily save animal lives, health, environment and money now!
+                      </p>
+                      <br/>
+                      <br/>
+                      <h1
+                      style={{
+                      
+                          textAlign:'center',
+                          color:'red',
+                          fontSize:"50px",
+                          fontFamily:"c",
+                          fontWeight:"bold"
+
+                      
+                      }}
+                      
+                  >Join Kind Meal Now</h1>
+                        <div class="container">
+                            <div class="box"
+                            style={{
+                              display : 'flex',
+                              flexDirection : 'row',
+                            }}>
+                                <div class="box-row">
+                                    <div class="box-cell box1"
+                                    style={{
+                                      fontSize:"25px",
+                                      color:'#9ca4ba',
+                                      textAlign:'center'
+                                  
+                                    }}>
+                                    
+                                    All Vegetarian Mart is a cafe-style vegetarian
+                                    mart, with selected vegan options available.
+                                      We delight you with a delicious range of Asian
+                                      and Western cuisines, complemented with an assort
+                                      We serve delicious home-cooked vegetarian meals,
+                                      crafted with the healthiest ingredients and plenty of
+                                      love. We also sell natural, handmade clay and wooden
+                                        Buddhist crafts, health supplem.
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        <br/>
+                        <br/>
+                        <h1
+                  style={{
+                    fontSize:'32px',
+                    textAlign:'center',
+                    color:'#666666',
+
+                  }}
+                  >Featured On</h1>
+                  <img 
+                  style={{
+                    marginLeft:"120px"
+                  }}
+                    src="https://www.kindmeal.my/images/media-feature2.png" alt="shiv"/>
+                    <div 
+                    style={{
+                      height:"361px",
+                      marginTop:"100px",
+                      border:"0px solid red",
+                      backgroundColor:"#ececec"
+                    }}>
+                    <img
+                    style={{
+                      marginLeft:"120px",
+                    }}
+                    src='https://www.kindmeal.my/images/banner_whykindmeal.png' alt='shiv'/>
+                  </div>
+                    
+                    </Box>
+                    
+                        </>
+                    )
+                }
 
 
-export default Home
+                export default Home

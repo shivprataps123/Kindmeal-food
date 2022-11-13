@@ -1,12 +1,10 @@
-
-
 import {Link} from 'react-router-dom'
 import {
   Box,
   Flex,
   Avatar,
   HStack,
-  
+  Text,
   IconButton,
   Button,
   Menu,
@@ -17,6 +15,7 @@ import {
   useDisclosure,
   useColorModeValue,
   Stack,
+  Heading,
 } from '@chakra-ui/react';
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
 
@@ -39,7 +38,6 @@ const NavLink = ({children})=> (
 
 export default function Simple() {
   const { isOpen, onOpen, onClose } = useDisclosure();
- 
   return (
     <>
       <Box bg={useColorModeValue('#2bb673', 'gray.900')} px={4}>
@@ -54,8 +52,9 @@ export default function Simple() {
           />
           <HStack spacing={8} alignItems={'center'}>
             <Link to='/'>
-            <Box color="red"
-            fontSize= '30px'
+            <Box 
+            color="red"
+            fontSize= '40px'
             fontWeight= 'semibold'
             fontFamily="c">FOODIANS</Box>
              </Link>
@@ -70,6 +69,7 @@ export default function Simple() {
               {Links.map((link) => (
                 <NavLink key={link}>{link}</NavLink>
               ))}
+              <Link to='/favorite'><Text textAlign='center'>Favourite</Text></Link>
             </HStack>
           </HStack>
           <Flex alignItems={'center'}>
