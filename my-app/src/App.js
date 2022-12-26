@@ -1,19 +1,22 @@
-import Navbar from './Components/Navbar/Navbar';
 import './App.css';
+import Navbar from './Components/Navbar_Routing/Navbar';
+import Routers from './Components/Navbar_Routing/Router';
+import Footer from "./Components/Footer/Footer";
+import { KindMonents } from './Components/KindMoments/KindMonents';
 
-import Home from './Pages/Home'
-import AllRoutes from './Components/AllRoutes';
-import ImageSlider from './Components/Slider/ImageSlider';
 function App() {
   return (
-    <div className="App">
-      <Navbar/>
-     {/*<ImageSlider/>*/}
-      {/* <Home/> */}
-       <AllRoutes/> 
-     
-    </div>
+    <>
+    <Navbar/>
+ 
+    <Routers />
+  
+    <Footer/>
+
+    </>
   );
 }
+
+
 
 export default App;
