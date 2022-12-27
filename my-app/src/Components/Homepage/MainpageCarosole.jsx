@@ -1,12 +1,13 @@
 import React from 'react'
 import ImageSlider from "./ImageSlider";
+
+import "./slidermain.css";
 const c1 ='https://github.com/priyankadora20/Kindmeal_clone_website/blob/master/src/Components/Homepageimage/c1.png?raw=true'
 const c2 ="https://github.com/priyankadora20/Kindmeal_clone_website/blob/master/src/Components/Homepageimage/c2.png?raw=true"
 const c3 ="https://github.com/priyankadora20/Kindmeal_clone_website/blob/master/src/Components/Homepageimage/c3.png?raw=true"
 const c4 ="https://github.com/priyankadora20/Kindmeal_clone_website/blob/master/src/Components/Homepageimage/c4.png?raw=true"
 const c5 ="https://github.com/priyankadora20/Kindmeal_clone_website/blob/master/src/Components/Homepageimage/c5.png?raw=true"
 
-import "./slidermain.css";
 
 export default function MainpageCarosole() {
   const slides = [

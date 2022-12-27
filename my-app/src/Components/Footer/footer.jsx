@@ -23,6 +23,7 @@ import {
   export default function Footer() {
     return (
       <Box
+   
       marginTop='20px'
         bg={useColorModeValue('#2bb673', 'gray.900')}
         color={useColorModeValue('gray.700', 'gray.200')}>
